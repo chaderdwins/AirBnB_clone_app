@@ -1,0 +1,36 @@
+<% include ../partials/header %> 
+
+     <header class="jumbotron">
+         <div class="container">
+             <h1><span class="glyphicon glyphicon-tree-conifer"></span> Welcome to Cabin Roost</h1>
+             <p>Discover cabins across the world and share your favorite cabins with others</p>
+             <p>
+                <a class="btn btn-primary btn-lg" href="/cabins/new">Add New Cabin</a>
+             </p>
+              <!--<p>
+              <form action="/cabins" method="GET" class="form-inline" id="cabin-search">
+                <div class="form-group">
+                  <input type="text" name="search" placeholder="Cabin search..." class="form-control">
+                </div>
+              </form>
+             </p>-->
+         </div>
+     </header>
+     
+     <div class="row text-center flex-wrap" id="cabin-grid">
+        <% cabins.forEach(function(cabin){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                   <img src="<%= cabin.image %>">
+                   <div class="caption">
+                       <h4><%= cabin.name %></h4>
+                   </div>
+                   <p>
+                       <a href="/cabins/<%= cabin._id %>" class="btn btn-primary">More Info</a>
+                   </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+
+<% include ../partials/footer %>
