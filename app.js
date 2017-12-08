@@ -23,7 +23,7 @@ var commentRoutes    = require("./routes/comments"),
 // assign mongoose promise library and connect to database
 mongoose.Promise = global.Promise;
 
-const databaseUri = process.env.MONGODB_URI || 'mongodb://kingBee:PhyAZ39V!@ds125896.mlab.com:25896/cabin_roost';
+const databaseUri = process.env.MONGODB_URI || 'mongodb://username:password@ds125896.mlab.com:25896/cabin_roost';
 
 //local DB 
 //mongodb://localhost/cabin_roost
